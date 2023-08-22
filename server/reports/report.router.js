@@ -1,11 +1,10 @@
 const express = require("express");
-const { checkJwt } = require("../middleware/authorizationMiddleware");
+const {
+  checkJwt,
+  checkScopes,
+} = require("../middleware/authorizationMiddleware");
 const router = express.Router();
 const reportRepository = require("./report.repository");
-
-const { requiredScopes } = require("express-oauth2-jwt-bearer");
-
-const checkScopes = requiredScopes("read:reports");
 
 router.get("/", checkJwt, checkScopes, async (req, res, next) => {
   try {
