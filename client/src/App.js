@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from "./components/Header";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import ProductPage from "./components/products/ProductPage";
@@ -8,6 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PaginationControls from "./components/products/PaginationControls";
 
 const App = () => {
+  const [counter, setCounter] = useState(12);
   return (
     <div className='app'>
       <Header />
@@ -18,7 +20,7 @@ const App = () => {
         <Route exact path='/' element={<ProductPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
-      <PaginationControls />
+      <PaginationControls counter={counter} setCounter={setCounter} />
       <Footer />
     </div>
   );
