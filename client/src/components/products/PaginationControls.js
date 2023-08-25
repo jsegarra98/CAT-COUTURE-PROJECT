@@ -4,19 +4,19 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const PaginationControls = ({ page, currentPage, totalPages }) => {
-  const prevDisabled = page > 1 ? false : true;
-  const nextDisabled = page < totalPages ? false : true;
+const PaginationControls = ({ setPage, currentPage, totalPages }) => {
+  const prevDisabled = currentPage === 1;
+  const nextDisabled = currentPage === totalPages;
 
   const onPrev = () => {
     if (!prevDisabled) {
-      currentPage(page - 1);
+      setPage(currentPage - 1);
     }
   };
 
   const onNext = () => {
     if (!nextDisabled) {
-      currentPage(page + 1);
+      setPage(currentPage + 1);
     }
   };
 
@@ -24,7 +24,11 @@ const PaginationControls = ({ page, currentPage, totalPages }) => {
     <div className='container'>
       <div className='controls'>
         <div>
-          <button aria-label='Previous page' onClick={onPrev}>
+          <button
+            aria-label='Previous page'
+            onClick={onPrev}
+            disabled={prevDisabled}
+          >
             <FontAwesomeIcon icon={faChevronLeft} size='2x' />
           </button>
         </div>
@@ -32,7 +36,11 @@ const PaginationControls = ({ page, currentPage, totalPages }) => {
           Page {currentPage} of {totalPages}
         </span>
         <div>
-          <button aria-label='Next page' onClick={onNext}>
+          <button
+            aria-label='Next page'
+            onClick={onNext}
+            disabled={nextDisabled}
+          >
             <FontAwesomeIcon icon={faChevronRight} size='2x' />
           </button>
         </div>

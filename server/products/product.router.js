@@ -14,10 +14,21 @@ router.get(
   queryParamValidationMiddleware(queryParamsSchema),
   async (req, res, next) => {
     try {
-      const products = await productRepository.getProducts();
+      const limit = parseInt(req.query.limit) || 12;
+      let page = parseInt(req.query.page) || 1;
+
+      if (page < 1) {
+        page = 1;
+      }
+
+      const allProducts = await productRepository.getPagedProducts(limit, page);
+      const products = allProducts;
 
       const responseResults = {
         products,
+        currentPage: page,
+        itemsPerPage: limit,
+        totalItems: allProducts.length,
       };
 
       return res.json(responseResults);

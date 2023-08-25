@@ -44,10 +44,10 @@ const ProductPage = () => {
   }, []);
 
   return (
-    <main className="main-layout section-padding">
+    <main className='main-layout section-padding'>
       {loading && <Loader />}
-      {error && <ErrorMessage message="Error fetching products" />}
-      <ProductList products={products} className="main-content" />
+      {error && <ErrorMessage message='Error fetching products' />}
+      <ProductList products={products} className='main-content' />
     </main>
   );
 };
