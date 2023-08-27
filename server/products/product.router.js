@@ -21,14 +21,14 @@ router.get(
         page = 1;
       }
 
-      const allProducts = await productRepository.getPagedProducts(limit, page);
-      const products = allProducts;
+      const allProducts = await productRepository.getPagedProducts();
+      const products = productRepository.getPagedProducts(limit, page);
 
       const responseResults = {
         products,
         currentPage: page,
         itemsPerPage: limit,
-        totalItems: allProducts.length,
+        totalItems: allProducts.length / limit,
       };
 
       return res.json(responseResults);

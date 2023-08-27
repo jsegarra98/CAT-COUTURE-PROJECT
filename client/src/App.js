@@ -14,7 +14,7 @@ const App = () => {
   const limit = parseInt(queryParams.get("limit")) || 12;
 
   const [products, setProducts] = useState([]);
-  const [totalPages, setTotalPages] = useState(0);
+  const [totalPages, setTotalPages] = useState(9);
 
   useEffect(() => {
     const fetchProducts = async () => {
