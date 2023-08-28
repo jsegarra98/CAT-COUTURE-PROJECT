@@ -1,0 +1,10 @@
+/* Style for discounted products */
+.product.discounted {
+  border: 2px solid #ff5733; /* Add a border to discounted products */
+}
+
+/* Style for the discount badge on discounted products */
+.product.discounted .badge {
+  background-color: #ff5733; /* Background color for the badge */
+  /* Add more styles as needed */
+}

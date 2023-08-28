@@ -52,7 +52,7 @@ const DashboardPage = () => {
     fetchData();
 
     return () => abortController.abort();
-  }, []);
+  }, [getAccessTokenSilently]);
 
   return (
     <main className='narrow-layout main-content section-padding page-padding'>
