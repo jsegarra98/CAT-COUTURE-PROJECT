@@ -1,7 +1,7 @@
 const db = require("../db");
 
 module.exports = {
-  getCategoryReport: async (limit, offset) => {
+  getCategoryReport: async () => {
     try {
       const result = await db.query(
         `SELECT
