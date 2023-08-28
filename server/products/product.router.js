@@ -1,7 +1,7 @@
 const express = require("express");
 const Joi = require("joi");
 const router = express.Router();
-const db = require("../db");
+const productRepository = require("./product.repository");
 const queryParamValidationMiddleware = require("../middleware/queryParamValidationMiddleware");
 
 const queryParamsSchema = Joi.object().keys({
@@ -9,39 +9,27 @@ const queryParamsSchema = Joi.object().keys({
   limit: Joi.number().integer().min(1),
 });
 
-const getProducts = async () => {
-  try {
-    const result = await db.query(
-      `SELECT
-        p.id,
-        p.name,
-        p.description,
-        p.price,
-        pc.name AS "categoryName",
-        pi.name AS "imageName",
-        pi.description AS "imageDescription"
-      FROM product p
-      LEFT JOIN product_category pc ON p.product_category_id = pc.id
-      LEFT JOIN product_image pi ON p.product_image_id = pi.id
-      ORDER BY
-        p.id
-      `
-    );
-    return result.rows;
-  } catch (error) {
-    throw Error(error);
-  }
-};
-
 router.get(
   "/",
   queryParamValidationMiddleware(queryParamsSchema),
   async (req, res, next) => {
     try {
-      const products = await getProducts();
+      const limit = parseInt(req.query.limit) || 10;
+      let page = parseInt(req.query.page) || 1;
+
+      if (page < 1) {
+        page = 1;
+      }
+
+      const allProducts = await productRepository.getProducts();
+      const products = await productRepository.getPagedProducts(limit, page);
 
       const responseResults = {
         products,
+        currentPage: page,
+        itemsPerPage: limit,
+        totalItems: allProducts.length,
+        totalPages: allProducts.length / limit,
       };
 
       return res.json(responseResults);
