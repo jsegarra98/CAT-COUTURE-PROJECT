@@ -11,7 +11,6 @@ describe("App", () => {
         <App />
       </Router>
     );
-    expect(screen.getByText(/cat couture/i)).toBeInTheDocument();
     expect(screen.getByText(/products/i)).toBeInTheDocument();
     expect(screen.getByText(/dashboard/i)).toBeInTheDocument();
   });

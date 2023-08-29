@@ -11,7 +11,7 @@ const Footer = () => {
         Privacy policy
       </Link>
       <span> </span>
-      <p className='footerItem copyright'>CAT COUTURE</p>
+      <p className='footerItem copyright'>CAT COUTURE LTD</p>
     </footer>
   );
 };
