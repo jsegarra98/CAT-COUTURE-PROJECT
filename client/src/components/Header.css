@@ -23,8 +23,8 @@
 
 /* Logo name on the left */
 .logo-name {
-  font-weight: bold; /* Make the text bold */
-  color: white; /* Text color */
+  font-weight: bold;
+  color: white;
   font-size: medium;
   font-family: fantasy;
   letter-spacing: 0.2rem;
@@ -44,11 +44,10 @@
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn,
 button:hover {
@@ -86,7 +85,6 @@ button {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
   transition: 0.4s;

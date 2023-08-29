@@ -4,8 +4,12 @@
 }
 
 ul {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  text-align: center;
 }
+
 .product {
   background-color: #3c211c;
   border-radius: 1rem;
@@ -21,8 +25,7 @@ ul {
 
 /* Style for the discount badge on discounted products */
 .product.discounted .badge {
-  background-color: #ff5733; /* Background color for the badge */
-  /* Add more styles as needed */
+  background-color: #ff5733;
 }
 
 ul {
@@ -30,9 +33,9 @@ ul {
 }
 
 .product-image {
-  background-color: #e1d5c5; /* Background color */
+  background-color: #e1d5c5;
   border: 2px solid #d47c4e;
-  margin: 0.5rem; /* Margin */
+  margin: 0.5rem;
   display: inline-block;
   max-width: 80%;
 }
@@ -56,4 +59,18 @@ button {
   border: 0.1rem solid #d47c4e;
   margin: 0.5rem;
   width: 7rem;
+}
+
+@media screen and (min-width: 768px) {
+  /* Tablet styles: 2 products per row */
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Desktop styles: 4 products per row */
+  ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
