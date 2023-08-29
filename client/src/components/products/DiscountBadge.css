@@ -1,8 +1,10 @@
 /* Define styles for the discountBadge class */
 .discountBadge {
-  background-color: red; /* Background color for the badge */
-  color: white; /* Text color for the badge */
-  padding: 4px 8px; /* Padding around the badge text */
-  border-radius: 4px; /* Rounded corners for the badge */
-  font-weight: bold; /* Make the text bold */
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  background-color: #fd7e14;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
 }

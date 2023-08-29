@@ -1,0 +1,110 @@
+/* Navbar container */
+.navbar {
+  background-image: url(../components/ImageCSSFolder/HEADERLOGO.jpeg);
+  background-size: auto 5rem;
+  font-family: Arial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  max-width: 100vh;
+  max-height: 100vh;
+  width: 300px;
+  height: 300px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Logo name on the left */
+.logo-name {
+  font-weight: bold; /* Make the text bold */
+  color: white; /* Text color */
+  font-size: medium;
+  font-family: fantasy;
+  letter-spacing: 0.2rem;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+button:hover {
+  background: #ffd8a8;
+  color: black;
+}
+
+.dropbtn,
+button {
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.4s;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff4e6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  transition: 0.4s;
+  border-radius: 0.7rem;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 0.7rem;
+}
+
+button {
+  background-color: #e1d5c5;
+  color: black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #d47c4e;
+  margin: 0.5rem;
+  width: 5rem;
+}

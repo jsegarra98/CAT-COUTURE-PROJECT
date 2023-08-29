@@ -35,10 +35,12 @@ const Product = ({
             />
           )}
         </div>
-        <h3>{name}</h3>
-        <p>Price {price}</p>
-        <p data-testid='product-description'>{description}</p>
-        <button className='button'>Add to Cart</button>
+        <div className='product-description'>
+          <h3>{name}</h3>
+          <p data-testid='product-description'>{description}</p>
+          <p>Price {price}</p>
+        </div>
+        <button className='cart-button'>Add to Cart</button>
       </div>
     </li>
   );

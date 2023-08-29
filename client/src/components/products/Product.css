@@ -3,8 +3,57 @@
   border: 2px solid #ff5733; /* Add a border to discounted products */
 }
 
+ul {
+  display: inline-block;
+}
+.product {
+  background-color: #3c211c;
+  border-radius: 1rem;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 2rem 1rem;
+}
+
 /* Style for the discount badge on discounted products */
 .product.discounted .badge {
   background-color: #ff5733; /* Background color for the badge */
   /* Add more styles as needed */
+}
+
+ul {
+  padding: 3rem;
+}
+
+.product-image {
+  background-color: #e1d5c5; /* Background color */
+  border: 2px solid #d47c4e;
+  margin: 0.5rem; /* Margin */
+  display: inline-block;
+  max-width: 80%;
+}
+
+* {
+  text-align: center;
+}
+
+.product-description {
+  border: 2px solid #d47c4e;
+  background-color: bisque;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #e1d5c5;
+  color: black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #d47c4e;
+  margin: 0.5rem;
+  width: 7rem;
 }
