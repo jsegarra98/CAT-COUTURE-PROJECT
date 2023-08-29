@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <nav className={`navbar page-padding`}>
         <div className='logo-name'>CAT COUTURE</div>
-        <div className='navbar'>
+        <div className='navbar menu'>
           <div className='dropdown'>
             <button className='dropbtn'>
               Menu

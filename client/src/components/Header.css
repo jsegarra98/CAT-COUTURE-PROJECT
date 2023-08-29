@@ -9,6 +9,10 @@
   height: 80px;
 }
 
+.menu {
+  background-image: none;
+}
+
 .logo {
   max-width: 100vh;
   max-height: 100vh;

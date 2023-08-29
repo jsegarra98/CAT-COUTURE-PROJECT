@@ -10,7 +10,8 @@ const Footer = () => {
       <Link to='/' className='footerItem'>
         Privacy policy
       </Link>
-      <p className='footerItem copyright'>Copyright Placeholder</p>
+      <span> </span>
+      <p className='footerItem copyright'>CAT COUTURE</p>
     </footer>
   );
 };

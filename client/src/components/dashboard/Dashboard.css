@@ -1,0 +1,38 @@
+.table {
+  color: #333333;
+  background: #ffd8a8;
+  border: 1px solid #d47c4e;
+  border-collapse: collapse;
+  width: 50%;
+}
+.tableCell {
+  padding: 0.5em;
+  border: 1px solid #d47c4e;
+  text-align: center;
+}
+.tableHeaderCell {
+  padding: 0.5em;
+  border: 1px solid #d47c4e;
+  color: #000000;
+  background: #ffd8a8;
+}
+
+.page-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.section-padding {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.half-width {
+  background-color: #3c211c;
+  color: #ffd8a8;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  margin: 0 1rem;
+}

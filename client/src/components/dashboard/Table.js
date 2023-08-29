@@ -1,8 +1,9 @@
+import "./Dashboard.css";
 
 const Table = ({ children, className }) => {
   return (
     <div className={`${className || ""} container`}>
-      <table className="table">{children}</table>
+      <table className='table'>{children}</table>
     </div>
   );
 };

@@ -12,14 +12,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.page-padding {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.section-padding {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
 .app {
   display: inline;
@@ -96,34 +88,4 @@ span {
 }
 .discountBadge {
   padding: 0.5rem;
-}
-
-.table {
-  color: #333333;
-  background: #ffffff;
-  border: 1px solid grey;
-  border-collapse: collapse;
-  width: 100%;
-}
-.tableCell {
-  padding: 0.5em;
-  border: 1px solid lightgrey;
-}
-.tableHeaderCell {
-  padding: 0.5em;
-  border: 1px solid lightgrey;
-  color: #000000;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (min-width: 672px) {
-  .half-width {
-    max-width: 672px;
-  }
-}
-.left-align {
-  text-align: left;
-}
-.right-align {
-  text-align: right;
 }
